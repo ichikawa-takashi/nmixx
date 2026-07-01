@@ -1,0 +1,326 @@
+$inner: 1280px;
+$padding-pc: 25px;
+$padding-sp: 15px;
+
+@function strip-unit($value) {
+    @return ($value / 1px);
+}
+
+/*--------------------------
+文字に対して、一括でfont-size、line-height、letter-spacing、font-weightを指定する
+line-heightがpxの場合
+---------------------------*/
+@mixin font($font-size: null,
+    $line-height: null,
+    $letter-spacing: null,
+    $font-weight: null) {
+    @if $font-size {
+        font-size: calc($font-size / 16 * 1rem);
+    }
+
+    @if $line-height {
+        line-height: calc($line-height / $font-size);
+    }
+
+    @if $letter-spacing {
+        letter-spacing: calc($letter-spacing / 1000 * 1em);
+    }
+
+    @if $font-weight {
+        font-weight: $font-weight;
+    }
+}
+
+
+/*--------------------------
+文字に対して、一括でfont-size、line-height、letter-spacing、font-weightを指定する
+line-heightが％の場合
+---------------------------*/
+@mixin f($font-size: null,
+    $line-height: null,
+    $letter-spacing: null,
+    $font-weight: null) {
+    @if $font-size {
+        font-size: calc($font-size / 16 * 1rem);
+    }
+
+    @if $line-height {
+        line-height: calc($line-height / 100);
+    }
+
+    @if $letter-spacing {
+        letter-spacing: calc($letter-spacing / 1000 * 1em);
+    }
+    // letter-spacingが％で書かれている時は、/100に変更する
+
+    @if $font-weight {
+        font-weight: $font-weight;
+    }
+}
+
+/*--------------------------------
+    remの換算
+--------------------------------*/
+
+@function rem($pixel) {
+    @return calc($pixel / 16 * 1rem);
+}
+
+@function rem2($pixel) {
+    @return calc($pixel / 32 * 1rem);
+}
+
+/*--------------------------------
+    vwにする
+--------------------------------*/
+@function vw($window_width, $size) {
+    @return calc($size / $window_width * 100vw);
+}
+
+@function vwmin($window_width, $size) {
+    @return min(calc($size / $window_width * 100vw), $size * 1px);
+}
+
+/*--------------------------------
+    親要素に対する割合
+--------------------------------*/
+@function per($parent_width, $child_width) {
+    @return calc($child_width / $parent_width * 100%);
+}
+
+/*--------------------------------
+背景のグラデーション
+--------------------------------*/
+@function lg($color01, $color02, $deg: 0) {
+  @return linear-gradient($deg * 1deg, $color01 0%, $color02 100%);
+}
+
+
+/*--------------------------------
+一次関数
+画面幅 1440pxの時は、120pxで、そこからどんどん小さくなり、1000pxの時に20pxになるという実装の際に使える関数。
+--------------------------------*/
+@function linear_func($point_x1, $point_y1, $point_x2, $point_y2) {
+    @return calc(($point_y2 - $point_y1) * (100vw - $point_x1 * 1px) / ($point_x2 - $point_x1) + $point_y1 * 1px);
+}
+
+/*--------------------------------
+一次関数（最大値、最小値付き）
+画面幅 1440pxの時は、120pxで、そこからどんどん小さくなり、1000pxの時に20pxになるという実装の際に使える関数。
+--------------------------------*/
+@function linear_func_clamp($point_x1, $point_y1, $point_x2, $point_y2) {
+  @return clamp(
+    $point_y2 * 1px,
+    calc(
+      ($point_y2 - $point_y1) * (100vw - $point_x1 * 1px) /
+        ($point_x2 - $point_x1) + $point_y1 * 1px
+    ),
+    $point_y1 * 1px
+  );
+}
+
+/*--------------------------------
+擬似要素の背景
+--------------------------------*/
+@mixin bgimage($bg_width, $bg_height) {
+    content: "";
+    position: absolute;
+    width: rem($bg_width);
+    height: rem($bg_height);
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: rem($bg_width) rem($bg_height);
+}
+
+@mixin bgimage_double($bg_width, $bg_height) {
+    content: "";
+    position: absolute;
+    width: rem2($bg_width);
+    height: rem2($bg_height);
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: rem2($bg_width) rem2($bg_height);
+}
+
+@mixin image_size($width, $height) {
+    width: rem($width);
+    height: rem($height);
+    display: block;
+
+    img {
+        aspect-ratio: $width / $height;
+        object-fit: cover;
+    }
+}
+
+@mixin image_double($width, $height) {
+    width: rem2($width);
+    height: rem2($height);
+    display: block;
+
+    img {
+        aspect-ratio: $width / $height;
+        object-fit: cover;
+    }
+}
+
+
+/*--------------------------------
+三角形
+--------------------------------*/
+@mixin custom-border($left-right-size: 3, $top-size: 8, $top-color: white) {
+    border-left: #{$left-right-size}px solid transparent;
+    border-right: #{$left-right-size}px solid transparent;
+    border-top: #{$top-size}px solid $top-color;
+    bottom: -#{$top-size}px;
+}
+
+@mixin custom-border-sp($left-right-size: 3, $top-size: 8, $top-color: white) {
+    border-left: #{$left-right-size}px solid transparent;
+    border-right: #{$left-right-size}px solid transparent;
+    border-top: #{$top-size}px solid $top-color;
+    bottom: -#{$top-size}px;
+}
+
+/*--------------------------
+  フォント読み込み
+---------------------------*/
+$sans: "Noto Sans JP",
+sans-serif;
+
+$serif: "Shippori Mincho",
+YuMincho,
+"Yu Mincho",
+"Noto Serif JP",
+serif,
+"Hiragino Kaku Gothic ProN",
+"ヒラギノ角ゴ ProN W3",
+"Hiragino Sans",
+"ヒラギノ角ゴシック",
+"メイリオ",
+Meiryo,
+"ＭＳ Ｐゴシック",
+"MS PGothic",
+Arial,
+Helvetica,
+sans-serif;
+
+$zen: "Zen Kaku Gothic New",
+sans-serif;
+
+$cormorant: "Cormorant",
+serif;
+
+$en: "Roboto",
+sans-serif;
+
+
+// フォントウェイトの変数指定
+$light: 300;
+$medium: 500;
+$regular: 400;
+$semi: 600;
+$bold: 700;
+$extra: 900;
+
+// カラーの変数指定
+$black: #000;
+$white: #ffffff;
+$green: #669868;
+$beige: #b4a173;
+$blue: #5A8FB8;
+
+body {
+    font-family: $zen;
+    color: $black;
+}
+
+// ==============================
+// ブレイクポイント定義
+// ==============================
+$breakpoints: (
+  sm: 600,
+  md: 768,
+  lg: 1280,
+  xl: 1440,
+);
+
+// ==============================
+// メディアクエリー mixin（SPファースト）
+// ・デフォルト：min-width
+// ・キー / 数値 両対応
+// ・必要な時だけ max を使う
+// ==============================
+//
+// 使い方:
+// @include mq(md) {}          // min-width: 768px
+// @include mq(1000) {}        // min-width: 1000px
+// @include mq(lg, max) {}     // max-width: 1280px
+//
+@mixin mq($size: md, $type: min) {
+  $breakpoint: null;
+
+  // 数値が直接渡された場合
+  @if type-of($size) == number {
+    $breakpoint: $size;
+  }
+  // キー指定の場合
+  @else {
+    $breakpoint: map-get($breakpoints, $size);
+
+    @if $breakpoint == null {
+      @error "Unknown breakpoint: #{$size}";
+    }
+  }
+
+  // min / max バリデーション
+  @if not index(min max, $type) {
+    @error "mq() second argument must be 'min' or 'max'.";
+  }
+
+  @media screen and (#{$type}-width: #{$breakpoint}px) {
+    @content;
+  }
+}
+
+
+
+.sp {
+    @include mq('md') {
+        display: none;
+    }
+}
+
+.pc {
+    display: none;
+
+    @include mq('md') {
+        display: block;
+    }
+}
+
+/*--------------------------------
+リキッドの設定
+--------------------------------*/
+html {
+
+    //~750px
+    @media (max-width: 750px) {
+        font-size: vw(750, 16);
+    }
+
+    //750px〜
+    font-size: 16px;
+}
+
+@import "reset";
+@import "common";
+@import "test";
+@import "page";
+@import "news";
+@import "members";
+@import "movie";
+@import "discography";
+@import "special";

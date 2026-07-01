@@ -1,0 +1,74 @@
+.profile {
+  width: 100%;
+  padding-top: rem(100);
+  padding-bottom: rem(150);
+}
+
+.profile__inner {
+  width: 100%;
+  padding-right: rem(60);
+  padding-left: rem(60);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.profile__heading-wrap {
+  text-align: center;
+}
+
+.profile__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: rem(30);
+  row-gap: rem(50);
+  margin-top: rem(100);
+}
+
+.profile__figure {
+  width: 100%;
+}
+
+.profile__image {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.profile__caption {
+  display: block;
+  margin-top: rem(10);
+}
+
+.profile__name {
+  display: block;
+  font-family: $cormorant;
+  color: $black;
+  @include font(36, 44, 0, $bold);
+}
+
+.profile__birthday {
+  display: block;
+  color: $blue;
+  @include font(24, 35, 0, $regular);
+}
+
+@include mq("md") {
+  .profile {
+    padding-top: rem(128);
+    padding-bottom: rem(126);
+  }
+
+  .profile__inner {
+    max-width: rem(1250);
+    padding-right: rem(25);
+    padding-left: rem(25);
+  }
+
+  .profile__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: rem(60);
+  }
+
+  .profile__name {
+    @include font(32, 39, 0, 500);
+  }
+}

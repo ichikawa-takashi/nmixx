@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=Noto+Sans+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>PROFILE | NMIXX</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__logo" href="./index.html" aria-label="NMIXX HOME">
+        <img src="./img/logo.svg" alt="NMIXX">
+      </a>
+      <nav class="header__nav" aria-label="グローバルナビゲーション">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a class="header__nav-link" href="./news.html">NEWS</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="#">DISCOGRAPHY</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="./movie.html">MOVIE</a></li>
+          <li class="header__nav-item"><a class="header__nav-link is-current" href="./members.html">MEMBERS</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="./schedule.html">SCHEDULE</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="./special.html">SPECIAL</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="#">FANCLUB</a></li>
+        </ul>
+      </nav>
+      <button class="header__hamburger js-hamburger" type="button" aria-label="メニューを開く">
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer js-drawer" aria-hidden="true">
+    <div class="drawer__inner">
+      <a class="drawer__logo" href="./index.html" aria-label="NMIXX HOME">
+        <img src="./img/logo.svg" alt="NMIXX">
+      </a>
+      <nav class="drawer__nav" aria-label="スマートフォンナビゲーション">
+        <ul class="drawer__list">
+          <li class="drawer__item"><a class="drawer__link" href="./news.html">NEWS</a></li>
+          <li class="drawer__item"><a class="drawer__link" href="#">DISCOGRAPHY</a></li>
+          <li class="drawer__item"><a class="drawer__link" href="./movie.html">MOVIE</a></li>
+          <li class="drawer__item"><a class="drawer__link" href="./members.html">MEMBERS</a></li>
+          <li class="drawer__item"><a class="drawer__link" href="./schedule.html">SCHEDULE</a></li>
+          <li class="drawer__item"><a class="drawer__link" href="./special.html">SPECIAL</a></li>
+          <li class="drawer__item"><a class="drawer__link" href="#">FANCLUB</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <section class="profile">
+      <div class="profile__inner">
+        <div class="profile__heading-wrap">
+          <h1 class="heading">PROFILE</h1>
+        </div>
+
+        <ul class="profile__list">
+          <li class="profile__item">
+            <figure class="profile__figure">
+              <img class="profile__image" src="./img/lily.jpg" alt="LILY">
+              <figcaption class="profile__caption">
+                <span class="profile__name">LILY</span>
+                <span class="profile__birthday">2002.10.17</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="profile__item">
+            <figure class="profile__figure">
+              <img class="profile__image" src="./img/haewon.jpg" alt="HAEWON">
+              <figcaption class="profile__caption">
+                <span class="profile__name">HAEWON</span>
+                <span class="profile__birthday">2003.02.25</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="profile__item">
+            <figure class="profile__figure">
+              <img class="profile__image" src="./img/sullyoon.jpg" alt="SULLYOON">
+              <figcaption class="profile__caption">
+                <span class="profile__name">SULLYOON</span>
+                <span class="profile__birthday">2004.01.26</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="profile__item">
+            <figure class="profile__figure">
+              <img class="profile__image" src="./img/bae.jpg" alt="BAE">
+              <figcaption class="profile__caption">
+                <span class="profile__name">BAE</span>
+                <span class="profile__birthday">2004.12.28</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="profile__item">
+            <figure class="profile__figure">
+              <img class="profile__image" src="./img/jiwoo.jpg" alt="JIWOO">
+              <figcaption class="profile__caption">
+                <span class="profile__name">JIWOO</span>
+                <span class="profile__birthday">2005.04.13</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="profile__item">
+            <figure class="profile__figure">
+              <img class="profile__image" src="./img/kyujin.jpg" alt="KYUJIN">
+              <figcaption class="profile__caption">
+                <span class="profile__name">KYUJIN</span>
+                <span class="profile__birthday">2006.05.26</span>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="footer__logo" href="./index.html" aria-label="NMIXX HOME">
+        <img src="./img/logo-footer.svg" alt="NMIXX">
+      </a>
+      <ul class="footer__sns-list">
+        <li class="footer__sns-item">
+          <a class="footer__sns-link" href="#" aria-label="Instagram"><img src="./img/instagram.svg" alt=""></a>
+        </li>
+        <li class="footer__sns-item">
+          <a class="footer__sns-link" href="#" aria-label="Facebook"><img src="./img/facebook.svg" alt=""></a>
+        </li>
+        <li class="footer__sns-item">
+          <a class="footer__sns-link" href="#" aria-label="YouTube"><img src="./img/youtube.svg" alt=""></a>
+        </li>
+        <li class="footer__sns-item">
+          <a class="footer__sns-link" href="#" aria-label="X"><img src="./img/x.svg" alt=""></a>
+        </li>
+      </ul>
+      <small class="footer__copy">&copy; 2026 JYP Entertainment / WARNER MUSIC JAPAN INC.</small>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/gsap.js"></script>
+</body>
+
+</html>
