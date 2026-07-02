@@ -35,13 +35,26 @@
                 <div class="top-fv__content">
                     <img class="top-fv__logo" src="./img/fv-logo.svg" alt="NMIXX">
                     <p class="top-fv__site-name">JAPAN OFFICIAL SITE</p>
-                    <a class="top-fv__button" href="./movie.html">WATCH MV<span class="top-fv__button-icon"></span></a>
+                    <a class="top-fv__button js-youtube-modal-open" href="https://youtu.be/-SEKt_0pdHM" data-youtube-id="-SEKt_0pdHM">WATCH MV<span class="top-fv__button-icon"></span></a>
                     <p class="top-fv__scroll">SCROLL</p>
                 </div>
-                <picture class="top-fv__bubbles">
-                    <source media="(min-width: 768px)" srcset="./img/fv-bottom.png">
-                    <img src="./img/fv-bottom_sp.png" alt="">
-                </picture>
+                <div class="top-fv__bubbles js-fv-bubbles">
+                    <button class="top-fv__bubble-main js-fv-bubbles-button" type="button" aria-label="NSWERリンクを開く" aria-expanded="false">
+                        <span class="top-fv__bubble-main-inner">
+                            <img class="top-fv__bubble-image" src="./img/nswer-main.png" alt="NSWER">
+                            <span class="top-fv__bubble-button" aria-hidden="true"></span>
+                        </span>
+                    </button>
+                    <a class="top-fv__bubble-link top-fv__bubble-link--01" href="#">
+                        <img class="top-fv__bubble-image" src="./img/nswer-01.png" alt="NSWER">
+                    </a>
+                    <a class="top-fv__bubble-link top-fv__bubble-link--02" href="#">
+                        <img class="top-fv__bubble-image" src="./img/nswer-02.png" alt="NSWER">
+                    </a>
+                    <a class="top-fv__bubble-link top-fv__bubble-link--03" href="#">
+                        <img class="top-fv__bubble-image" src="./img/nswer-03.png" alt="NSWER">
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -71,36 +84,49 @@
                     <h2 class="top-section__title">MOVIE</h2>
                 </div>
                 <div class="top-movie__content">
-                    <a class="top-movie__main" href="./movie.html">
-                        <img class="top-movie__main-image" src="./img/thumbnail.jpg" alt="">
+                    <a class="top-movie__main js-youtube-modal-open" href="https://youtu.be/-SEKt_0pdHM" data-youtube-id="-SEKt_0pdHM">
+                        <img class="top-movie__main-image js-youtube-thumb" src="./img/thumbnail.jpg" alt="">
+                        <span class="top-movie__play" aria-hidden="true"></span>
                     </a>
                     <div class="top-movie__list-bottom">
                         <div class="top-movie__list swiper">
                             <ul class="top-movie__list-track swiper-wrapper">
                                 <li class="top-movie__item swiper-slide">
-                                    <a class="top-movie__link" href="#">
-                                        <img class="top-movie__thumb" src="./img/thumbnail.jpg" alt="">
+                                    <a class="top-movie__link js-youtube-modal-open" href="https://youtu.be/6Ycn9qZK09I" data-youtube-id="6Ycn9qZK09I">
+                                        <span class="top-movie__thumb-wrap">
+                                            <img class="top-movie__thumb js-youtube-thumb" src="./img/thumbnail.jpg" alt="">
+                                            <span class="top-movie__play top-movie__play--thumb" aria-hidden="true"></span>
+                                        </span>
                                         <span class="top-movie__text"><span class="top-movie__label">MV</span><span
                                                 class="top-movie__song">expergo</span></span>
                                     </a>
                                 </li>
                                 <li class="top-movie__item swiper-slide">
-                                    <a class="top-movie__link" href="#">
-                                        <img class="top-movie__thumb" src="./img/thumbnail.jpg" alt="">
+                                    <a class="top-movie__link js-youtube-modal-open" href="https://youtu.be/8GWbzjE_E7o" data-youtube-id="8GWbzjE_E7o">
+                                        <span class="top-movie__thumb-wrap">
+                                            <img class="top-movie__thumb js-youtube-thumb" src="./img/thumbnail.jpg" alt="">
+                                            <span class="top-movie__play top-movie__play--thumb" aria-hidden="true"></span>
+                                        </span>
                                         <span class="top-movie__text"><span class="top-movie__label">Performance
                                                 Video</span><span class="top-movie__song">expergo</span></span>
                                     </a>
                                 </li>
                                 <li class="top-movie__item swiper-slide">
-                                    <a class="top-movie__link" href="#">
-                                        <img class="top-movie__thumb" src="./img/thumbnail.jpg" alt="">
+                                    <a class="top-movie__link js-youtube-modal-open" href="https://youtu.be/-SEKt_0pdHM" data-youtube-id="-SEKt_0pdHM">
+                                        <span class="top-movie__thumb-wrap">
+                                            <img class="top-movie__thumb js-youtube-thumb" src="./img/thumbnail.jpg" alt="">
+                                            <span class="top-movie__play top-movie__play--thumb" aria-hidden="true"></span>
+                                        </span>
                                         <span class="top-movie__text"><span class="top-movie__label">Dance Practice</span><span
                                                 class="top-movie__song">expergo</span></span>
                                     </a>
                                 </li>
                                 <li class="top-movie__item swiper-slide">
-                                    <a class="top-movie__link" href="#">
-                                        <img class="top-movie__thumb" src="./img/thumbnail.jpg" alt="">
+                                    <a class="top-movie__link js-youtube-modal-open" href="https://youtu.be/6Ycn9qZK09I" data-youtube-id="6Ycn9qZK09I">
+                                        <span class="top-movie__thumb-wrap">
+                                            <img class="top-movie__thumb js-youtube-thumb" src="./img/thumbnail.jpg" alt="">
+                                            <span class="top-movie__play top-movie__play--thumb" aria-hidden="true"></span>
+                                        </span>
                                         <span class="top-movie__text"><span class="top-movie__label">Behind Film</span><span
                                                 class="top-movie__song">expergo</span></span>
                                     </a>
@@ -117,6 +143,16 @@
                 </div>
             </div>
         </section>
+
+        <div class="youtube-modal js-youtube-modal" aria-hidden="true">
+            <div class="youtube-modal__overlay js-youtube-modal-close"></div>
+            <div class="youtube-modal__content" role="dialog" aria-modal="true" aria-label="YouTube">
+                <button class="youtube-modal__close js-youtube-modal-close" type="button" aria-label="閉じる"></button>
+                <div class="youtube-modal__movie">
+                    <iframe class="youtube-modal__iframe js-youtube-iframe" src="" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
 
         <section class="top-section top-members">
             <div class="top-section__inner">

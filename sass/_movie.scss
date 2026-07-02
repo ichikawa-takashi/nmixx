@@ -17,6 +17,7 @@
 }
 
 .movie__link {
+  position: relative;
   display: block;
   color: $black;
   transition: opacity 0.3s ease;
@@ -24,6 +25,32 @@
 
 .movie__link:hover {
   opacity: 0.6;
+}
+
+.movie__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: rem(70);
+  height: rem(70);
+  border: 1px solid rgba($color: $white, $alpha: 0.8);
+  border-radius: 50%;
+  background-color: rgba($color: $white, $alpha: 0.22);
+  transform: translate(-50%, -50%);
+}
+
+.movie__play::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: rem(13) solid transparent;
+  border-bottom: rem(13) solid transparent;
+  border-left: rem(20) solid $white;
+  transform: translate(-35%, -50%);
 }
 
 .movie__list {
@@ -37,7 +64,7 @@
 .movie__thumb {
   display: block;
   width: 100%;
-  aspect-ratio: 690 / 346;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
@@ -79,7 +106,7 @@
   }
 
   .movie__thumb {
-    aspect-ratio: 580 / 291;
+    aspect-ratio: 16 / 9;
   }
 
   .movie__title {

@@ -215,8 +215,19 @@
 }
 
 .pagination-arrow {
+    position: relative;
     display: block;
     transition: transform 0.3s ease;
+}
+
+.pagination-arrow::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: rem(80);
+    height: rem(44);
+    content: "";
+    transform: translate(-50%, -50%);
 }
 
 .pagination-arrow--prev:hover {

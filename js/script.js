@@ -105,6 +105,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         });
     }
 
+    // top-fv ANSWER bubbles
+    $(".js-fv-bubbles-button").on("click", function () {
+        var bubbles = $(this).closest(".js-fv-bubbles");
+        var isOpen = bubbles.toggleClass("is-open").hasClass("is-open");
+
+        $(this)
+            .attr("aria-expanded", isOpen ? "true" : "false")
+            .attr("aria-label", isOpen ? "NSWERリンクを閉じる" : "NSWERリンクを開く");
+    });
+
     // top-movie スライダー(SPのみ。2枚1組でページ送り。画面幅がPC/SPの境界(768px)をまたいだ時に作り直す)
     if ($(".top-movie__list.swiper").length) {
         var movieSwiper = null;
@@ -142,6 +152,50 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         }
         syncMovieSwiper(moviePcQuery);
         moviePcQuery.addEventListener("change", syncMovieSwiper);
+    }
+
+    // top-movie YouTube modal
+    if ($(".js-youtube-modal-open").length) {
+        $(".js-youtube-modal-open").each(function () {
+            var youtubeId = $(this).data("youtube-id");
+            var thumb = $(this).find(".js-youtube-thumb");
+
+            if (youtubeId && thumb.length) {
+                thumb.attr("src", "https://img.youtube.com/vi/" + youtubeId + "/maxresdefault.jpg");
+                thumb.on("error", function () {
+                    $(this).off("error").attr("src", "https://img.youtube.com/vi/" + youtubeId + "/hqdefault.jpg");
+                });
+            }
+        });
+
+        $(".js-youtube-modal-open").on("click", function (e) {
+            e.preventDefault();
+            var youtubeId = $(this).data("youtube-id");
+
+            if (!youtubeId) {
+                return;
+            }
+
+            $(".js-youtube-iframe").attr("src", "https://www.youtube.com/embed/" + youtubeId + "?autoplay=1&rel=0");
+            $(".js-youtube-modal").addClass("is-open").attr("aria-hidden", "false");
+            $("html,body").css("overflow", "hidden");
+        });
+    }
+
+    $(".js-youtube-modal-close").on("click", function () {
+        closeYoutubeModal();
+    });
+
+    $(document).on("keydown", function (e) {
+        if (e.key === "Escape" && $(".js-youtube-modal").hasClass("is-open")) {
+            closeYoutubeModal();
+        }
+    });
+
+    function closeYoutubeModal() {
+        $(".js-youtube-modal").removeClass("is-open").attr("aria-hidden", "true");
+        $(".js-youtube-iframe").attr("src", "");
+        $("html,body").css("overflow", "initial");
     }
 
     // modal
