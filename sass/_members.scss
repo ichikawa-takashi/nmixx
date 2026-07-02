@@ -65,10 +65,20 @@
 
   .profile__list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: rem(30);
     row-gap: rem(60);
+    margin-top: rem(100);
+  }
+
+  .profile__caption {
+    margin-top: rem(10);
   }
 
   .profile__name {
     @include font(32, 39, 0, 500);
+  }
+
+  .profile__birthday {
+    @include font(24, 35, 0, $regular);
   }
 }

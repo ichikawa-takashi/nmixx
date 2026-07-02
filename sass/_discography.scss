@@ -1,365 +1,385 @@
 .discography {
-  width: 100%;
-  padding-top: rem(100);
-  padding-bottom: rem(100);
+    width: 100%;
+    padding-top: rem(100);
+    padding-bottom: rem(100);
 }
 
 .discography__inner {
-  width: 100%;
-  padding-right: rem(55);
-  padding-left: rem(55);
-  margin-right: auto;
-  margin-left: auto;
+    width: 100%;
+    padding-right: rem(55);
+    padding-left: rem(55);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .discography__heading-wrap {
-  text-align: center;
+    text-align: center;
 }
 
 .discography__list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: rem(30);
-  row-gap: rem(65);
-  margin-top: rem(100);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: rem(30);
+    row-gap: rem(65);
+    margin-top: rem(100);
 }
 
 .discography__link {
-  display: block;
-  color: $black;
+    display: block;
+    color: $black;
 }
 
 .discography__image {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 .discography__title {
-  display: block;
-  margin-top: rem(10);
-  color: $black;
-  @include font(24, 35, 0, $medium);
+    display: block;
+    margin-top: rem(10);
+    color: $black;
+    @include font(24, 35, 0, $medium);
 }
 
 .discography__date {
-  display: block;
-  margin-top: rem(10);
-  color: $black;
-  @include font(20, 29, 0, $regular);
+    display: block;
+    margin-top: rem(10);
+    color: $black;
+    @include font(20, 29, 0, $regular);
 }
 
 .discography__pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: rem(135);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: rem(135);
 }
 
 .discography-detail {
-  width: 100%;
-  padding-top: rem(100);
-  padding-bottom: rem(100);
+    width: 100%;
+    padding-top: rem(100);
+    padding-bottom: rem(100);
 }
 
 .discography-detail__inner {
-  width: 100%;
-  padding-right: rem(30);
-  padding-left: rem(30);
-  margin-right: auto;
-  margin-left: auto;
+    width: 100%;
+    padding-right: rem(30);
+    padding-left: rem(30);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .discography-detail__heading-wrap {
-  text-align: center;
+    text-align: center;
 }
 
 .discography-detail__lead {
-  margin-top: rem(100);
-  text-align: center;
+    margin-top: rem(100);
+    text-align: center;
 }
 
 .discography-detail__title {
-  color: $black;
-  @include font(36, 52, 0, 700);
+    color: $black;
+    @include font(36, 52, 0, 700);
 }
 
 .discography-detail__release {
-  display: flex;
-  justify-content: center;
-  column-gap: rem(17);
-  margin-top: rem(15);
-  color: $black;
-  @include font(24, 35, 0, 400);
+    display: flex;
+    justify-content: center;
+    column-gap: rem(17);
+    margin-top: rem(15);
+    color: $black;
+    @include font(24, 35, 0, 400);
 }
 
 .discography-detail__jacket {
-  width: rem(450);
-  margin-top: rem(30);
-  margin-right: auto;
-  margin-left: auto;
+    width: rem(450);
+    margin-top: rem(30);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .discography-detail__jacket-image {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 .discography-detail__description {
-  margin-top: rem(60);
-  color: $black;
-  @include font(24, 42, 0, 400);
+    margin-top: rem(60);
+    color: $black;
+    @include font(24, 42, 0, 400);
 }
 
 .discography-detail__product {
-  margin-top: rem(150);
+    display: flex;
+    flex-direction: column;
+    margin-top: rem(150);
+}
+
+.discography-detail__product-contents {
+    display: contents;
 }
 
 .discography-detail__product-title {
-  text-align: center;
-  color: $black;
-  @include font(36, 52, 0, 700);
+    text-align: center;
+    color: $black;
+    @include font(36, 52, 0, 700);
+    order: 1;
 }
 
 .discography-detail__product-image {
-  width: rem(450);
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  margin-top: rem(30);
-  margin-right: auto;
-  margin-left: auto;
+    width: rem(450);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-top: rem(30);
+    margin-right: auto;
+    margin-left: auto;
+    order: 2;
 }
 
 .discography-detail__stream {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: rem(450);
-  width: 100%;
-  margin-top: rem(30);
-  margin-right: auto;
-  margin-left: auto;
-  border: 1px solid $black;
-  color: $black;
-  padding: rem(26.5) rem(20);
-  @include font(24, 35, 0, 400);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: rem(450);
+    width: 100%;
+    margin-top: rem(30);
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid $black;
+    color: $black;
+    padding: rem(26.5) rem(20);
+    @include font(24, 35, 0, 400);
+    order: 3;
 }
 
 .discography-detail__track {
-  width: rem(450);
-  margin-top: rem(60);
-  margin-right: auto;
-  margin-left: auto;
+    width: rem(450);
+    margin-top: rem(60);
+    margin-right: auto;
+    margin-left: auto;
+    order: 4;
 }
 
 .discography-detail__track-heading {
-  color: $black;
-  @include font(32, 42, 0, 500);
+    color: $black;
+    @include font(32, 42, 0, 500);
 }
 
 .discography-detail__track-list {
-  margin-top: rem(20);
-  color: $black;
-  counter-reset: track-number;
-  @include font(24, 42, 0, 400);
+    margin-top: rem(20);
+    color: $black;
+    counter-reset: track-number;
+    @include font(24, 42, 0, 400);
 }
 
 .discography-detail__track-list li {
-  counter-increment: track-number;
+    counter-increment: track-number;
 }
 
 .discography-detail__track-list li::before {
-  content: counter(track-number, decimal-leading-zero) ". ";
-  color: $blue;
+    content: counter(track-number, decimal-leading-zero) ". ";
+    color: $blue;
 }
 
 .discography-detail__more {
-  margin-top: rem(150);
+    margin-top: rem(150);
 }
 
 .discography-detail__more-heading {
-  text-align: center;
-  color: $black;
-  @include font(36, 52, 0, 500);
+    text-align: center;
+    color: $black;
+    @include font(36, 52, 0, 500);
 }
 
 .discography-detail__more-list {
-  margin-top: rem(60);
-  .discography__list{
-    margin-top: initial;
-  }
+    margin-top: rem(60);
+
+    .discography__list {
+        margin-top: initial;
+    }
 }
 
 .discography-detail__more-link {
-  display: block;
-  color: $black;
+    display: block;
+    color: $black;
 }
 
 .discography-detail__more-image {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 .discography-detail__more-title {
-  display: block;
-  margin-top: rem(8);
-  color: $black;
-  @include font(11, 16, 0, 700);
+    display: block;
+    margin-top: rem(8);
+    color: $black;
+    @include font(11, 16, 0, 700);
 }
 
 .discography-detail__more-date {
-  display: block;
-  margin-top: rem(3);
-  color: $black;
-  @include font(10, 15, 0, 400);
+    display: block;
+    margin-top: rem(3);
+    color: $black;
+    @include font(10, 15, 0, 400);
 }
 
 .discography-detail__back-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: rem(100);
-}
-
-.discography-detail__back {
-  display: flex;
-  align-items: center;
-  gap: rem(40);
-  color: $black;
-  transition: opacity 0.3s ease;
-  @include font(20, 29, 0, 500);
-}
-
-.discography-detail__back:hover {
-  opacity: 0.7;
-}
-
-.discography-detail__back::before {
-  flex-shrink: 0;
-  width: rem(50);
-  height: rem(8);
-  content: "";
-  background-image: url("../img/pagenation-arrow.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  transition: transform 0.3s ease;
-}
-
-.discography-detail__back:hover::before {
-  transform: translateX(rem(-6));
+    display: flex;
+    justify-content: center;
+    margin-top: rem(100);
 }
 
 @include mq("md") {
-  .discography {
-    padding-top: rem(134);
-    padding-bottom: rem(161);
-  }
+    .discography {
+        padding-top: rem(134);
+        padding-bottom: rem(161);
+    }
 
-  .discography__inner {
-    max-width: rem(1053);
-    padding-right: rem(30);
-    padding-left: rem(30);
-  }
+    .discography__inner {
+        max-width: rem(1053);
+        padding-right: rem(30);
+        padding-left: rem(30);
+    }
 
-  .discography__list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    column-gap: rem(28);
-    row-gap: rem(58);
-    margin-top: rem(98);
-  }
+    .discography__list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: rem(28);
+        row-gap: rem(58);
+        margin-top: rem(98);
+    }
 
-  .discography__title {
-    margin-top: rem(16);
-    @include font(20, 29, 0, 700);
-  }
+    .discography__title {
+        margin-top: rem(16);
+        @include font(20, 29, 0, 700);
+    }
 
-  .discography__date {
-    margin-top: rem(8);
-    @include font(14, 21, 0, 400);
-  }
+    .discography__date {
+        margin-top: rem(8);
+        @include font(14, 21, 0, 400);
+    }
 
-  .discography__pagination {
-    margin-top: rem(142);
-  }
+    .discography__pagination {
+        margin-top: rem(142);
+    }
 
-  .discography-detail {
-    padding-top: rem(100);
-    padding-bottom: rem(150);
-  }
+    .discography-detail {
+        padding-top: rem(100);
+        padding-bottom: rem(150);
+    }
 
-  .discography-detail__inner {
-    max-width: rem(1250);
-    padding-right: rem(25);
-    padding-left: rem(25);
-  }
+    .discography-detail__inner {
+        max-width: rem(1250);
+        padding-right: rem(25);
+        padding-left: rem(25);
+    }
 
-  .discography-detail__release {
-    column-gap: rem(23);
-    margin-top: rem(9);
-    @include font(22, 32, 0, 400);
-  }
+    .discography-detail__lead {
+        margin-top: rem(100);
+    }
 
-  .discography-detail__jacket {
-    width: rem(500);
-    margin-top: rem(30);
-  }
+    .discography-detail__title {
+        @include font(36, 52, 0, 700);
+    }
 
-  .discography-detail__description {
-    margin-top: rem(100);
-    @include font(22, 38.5, 0, 400);
-  }
+    .discography-detail__release {
+        column-gap: rem(23);
+        margin-top: rem(9);
+        @include font(22, 32, 0, 400);
+    }
 
-  .discography-detail__product {
-    display: grid;
-    grid-template-columns: rem(450) 1fr;
-    column-gap: rem(150);
-    align-items: center;
-    margin-top: rem(200);
-  }
+    .discography-detail__jacket {
+        width: rem(500);
+        margin-top: rem(30);
+    }
 
-  .discography-detail__product-title {
-    text-align: left;
-    @include font(24, 36, 0, 700);
-  }
+    .discography-detail__description {
+        margin-top: rem(100);
+        @include font(22, 38.5, 0, 400);
+    }
 
-  .discography-detail__product-image {
-    grid-row: 1 / 4;
-    width: 100%;
-    margin-top: 0;
-  }
+    .discography-detail__product {
+        flex-direction: row;
+        align-items: flex-start;
+        column-gap: rem(150);
+        margin-top: rem(200);
+    }
 
-  .discography-detail__stream {
-    width: rem(276);
-    min-height: rem(58);
-    margin-top: rem(25);
-    margin-right: 0;
-    margin-left: 0;
-    @include font(36, 52, 0, 400);
-  }
+    .discography-detail__product-contents {
+        display: block;
+        order: 2;
+    }
 
-  .discography-detail__track {
-    width: auto;
-    margin-top: rem(30);
-    margin-right: 0;
-    margin-left: 0;
-  }
+    .discography-detail__product-title {
+        flex: 1;
+        min-width: 0;
+        text-align: left;
+        @include font(36, 52, 0, 700);
+    }
 
-  .discography-detail__track-heading {
-    @include font(20, 29, 0, 700);
-  }
+    .discography-detail__product-image {
+        order: 1;
+        width: rem(450);
+        margin: 0;
+        aspect-ratio: 1 / 1;
+    }
 
-  .discography-detail__track-list {
-    margin-top: rem(12);
-    @include font(14, 25, 0, 400);
-  }
+    .discography-detail__stream {
+        flex: 1;
+        min-width: 0;
+        max-width: rem(420);
+        margin-top: rem(42);
+        margin-right: 0;
+        margin-left: calc(#{rem(450)} + #{rem(150)});
+        padding: rem(26.5) rem(20);
+        @include font(24, 35, 0, 400);
+        background-color: #fff;
+        margin-left: 0;
+        margin-right: 0;
+    }
 
-  .discography-detail__more {
-    margin-top: rem(150);
-  }
+    .discography-detail__track {
+        display: contents;
+    }
 
-  .discography-detail__more-heading {
-    text-align: left;
-    @include font(24, 36, 0, 700);
-  }
+    .discography-detail__track-heading {
+        flex: 1;
+        min-width: 0;
+        margin-top: rem(60);
+        @include font(32, 42, 0, 500);
+    }
 
-  .discography-detail__more-list {
-  }
+    .discography-detail__track-list {
+        flex: 1;
+        min-width: 0;
+        margin-top: rem(20);
+        @include font(24, 42, 0, 400);
+    }
+
+    .discography-detail__more {
+        margin-top: rem(150);
+    }
+
+    .discography-detail__more-heading {
+        text-align: left;
+        @include font(36, 52, 0, 500);
+    }
+
+    .discography-detail__more-list {
+        margin-top: rem(60);
+    }
+
+    .discography-detail__more-title {
+        margin-top: rem(8);
+        @include font(11, 16, 0, 700);
+    }
+
+    .discography-detail__more-date {
+        margin-top: rem(3);
+        @include font(10, 15, 0, 400);
+    }
+
+    .discography-detail__back-wrap {
+        margin-top: rem(100);
+    }
 }

@@ -1,13 +1,13 @@
 .special {
   width: 100%;
-  padding-top: rem(57);
-  padding-bottom: rem(56);
+  padding-top: rem(100);
+  padding-bottom: rem(100);
 }
 
 .special__inner {
   width: 100%;
-  padding-right: rem(23);
-  padding-left: rem(23);
+  padding-right: rem(60);
+  padding-left: rem(60);
   margin-right: auto;
   margin-left: auto;
 }
@@ -17,11 +17,11 @@
 }
 
 .special__list {
-  margin-top: rem(46);
+  margin-top: rem(100);
 }
 
 .special__item + .special__item {
-  margin-top: rem(28);
+  margin-top: rem(65);
 }
 
 .special__link {
@@ -30,42 +30,42 @@
 }
 
 .special__image {
-  aspect-ratio: 335 / 166;
+  aspect-ratio: 630 / 315;
   object-fit: cover;
 }
 
 .special__title {
   display: block;
-  margin-top: rem(8);
+  margin-top: rem(20);
   color: $black;
-  @include font(12, 18, 0, 700);
+  @include font(24, 35, 0, 500);
 }
 
 .special__pagination {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: rem(66);
+  margin-top: rem(150);
 }
 
 @include mq("md") {
   .special {
-    padding-top: rem(134);
-    padding-bottom: rem(147);
+    padding-top: rem(100);
+    padding-bottom: rem(150);
   }
 
   .special__inner {
-    max-width: rem(1006);
-    padding-right: rem(30);
-    padding-left: rem(30);
+    max-width: rem(1250);
+    padding-right: rem(25);
+    padding-left: rem(25);
   }
 
   .special__list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    column-gap: rem(29);
-    row-gap: rem(64);
-    margin-top: rem(93);
+    column-gap: rem(30);
+    row-gap: rem(65);
+    margin-top: rem(100);
   }
 
   .special__item + .special__item {
@@ -73,15 +73,15 @@
   }
 
   .special__image {
-    aspect-ratio: 300 / 150;
+    aspect-ratio: 380 / 190;
   }
 
   .special__title {
     margin-top: rem(14);
-    @include font(16, 24, 0, 700);
+    @include font(22, 35, 0, 500);
   }
 
   .special__pagination {
-    margin-top: rem(144);
+    margin-top: rem(150);
   }
 }

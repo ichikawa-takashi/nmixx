@@ -49,8 +49,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
 
     // ハンバーガーメニュー
+    // header/footerをJSで動的に読み込むため、要素が後から追加されても効くように委任(delegate)で束縛する
     $(function () {
-        $(".js-hamburger").click(function () {
+        $(document).on("click", ".js-hamburger", function () {
             $(this).toggleClass("is-open");
             if ($(this).hasClass("is-open")) {
                 openDrawer();
@@ -60,7 +61,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         });
 
         // backgroundまたはページ内リンクをクリックで閉じる
-        $(".js-drawer a[href]").on("click", function () {
+        $(document).on("click", ".js-drawer a[href]", function () {
             closeDrawer();
         });
 

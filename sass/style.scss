@@ -6,6 +6,13 @@ $padding-sp: 15px;
     @return ($value / 1px);
 }
 
+/*--------------------------------
+    SP / PC 判定フラグ
+    ・mq() で 750px 以上の min-width に入っている間だけ true になる
+    ・rem() / rem2() / font() / f() はこれを見て単位を切り替える
+--------------------------------*/
+$is-pc: false !default;
+
 /*--------------------------
 文字に対して、一括でfont-size、line-height、letter-spacing、font-weightを指定する
 line-heightがpxの場合
@@ -15,7 +22,7 @@ line-heightがpxの場合
     $letter-spacing: null,
     $font-weight: null) {
     @if $font-size {
-        font-size: calc($font-size / 16 * 1rem);
+        font-size: rem($font-size);
     }
 
     @if $line-height {
@@ -41,7 +48,7 @@ line-heightが％の場合
     $letter-spacing: null,
     $font-weight: null) {
     @if $font-size {
-        font-size: calc($font-size / 16 * 1rem);
+        font-size: rem($font-size);
     }
 
     @if $line-height {
@@ -60,13 +67,21 @@ line-heightが％の場合
 
 /*--------------------------------
     remの換算
+    ・SP（750px未満）: rem
+    ・PC（750px以上 / mq()の中）: px
 --------------------------------*/
 
 @function rem($pixel) {
+    @if $is-pc {
+        @return $pixel * 1px;
+    }
     @return calc($pixel / 16 * 1rem);
 }
 
 @function rem2($pixel) {
+    @if $is-pc {
+        @return calc($pixel / 2 * 1px);
+    }
     @return calc($pixel / 32 * 1rem);
 }
 
@@ -280,8 +295,18 @@ $breakpoints: (
     @error "mq() second argument must be 'min' or 'max'.";
   }
 
+  // rem() / font() を px 出力に切り替えるかどうか
+  // ・750px は SP⇔PC のルート文字サイズが切り替わる境界と一致させる
+  $switch-to-pc: $type == min and $breakpoint >= 750;
+
   @media screen and (#{$type}-width: #{$breakpoint}px) {
-    @content;
+    @if $switch-to-pc {
+      $is-pc: true !global;
+      @content;
+      $is-pc: false !global;
+    } @else {
+      @content;
+    }
   }
 }
 
