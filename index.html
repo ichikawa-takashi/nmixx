@@ -2,196 +2,233 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=Noto+Sans+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>NMIXX JAPAN OFFICIAL SITE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=Noto+Sans+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>NMIXX JAPAN OFFICIAL SITE</title>
 </head>
 
 <body>
-  <div id="header-placeholder" data-header-modifier="top-header"></div>
+    <div id="header-placeholder" data-header-modifier="top-header"></div>
 
-<main>
-    <section class="top-fv">
-      <div class="top-fv__inner">
-        <div class="top-fv__image-wrap">
-          <img class="top-fv__image" src="./img/fv.jpg" alt="NMIXX">
-          <ul class="top-fv__dots" aria-label="スライド">
-            <li class="top-fv__dot is-current"></li>
-            <li class="top-fv__dot"></li>
-            <li class="top-fv__dot"></li>
-            <li class="top-fv__dot"></li>
-            <li class="top-fv__dot"></li>
-          </ul>
-        </div>
-        <div class="top-fv__content">
-          <img class="top-fv__logo" src="./img/fv-logo.svg" alt="NMIXX">
-          <p class="top-fv__site-name">JAPAN OFFICIAL SITE</p>
-          <a class="top-fv__button" href="./movie.html">WATCH MV<span class="top-fv__button-icon"></span></a>
-          <p class="top-fv__scroll">SCROLL</p>
-        </div>
-        <picture class="top-fv__bubbles">
-          <source media="(min-width: 768px)" srcset="./img/fv-bottom.png">
-          <img src="./img/fv-bottom_sp.png" alt="">
-        </picture>
-      </div>
-    </section>
+    <main>
+        <section class="top-fv">
+            <div class="top-fv__inner">
+                <div class="top-fv__image-wrap">
+                    <div class="top-fv__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="top-fv__image" src="./img/fv.jpg" alt="NMIXX"></div>
+                            <div class="swiper-slide"><img class="top-fv__image" src="./img/special-dummy-image.jpg" alt="NMIXX"></div>
+                            <div class="swiper-slide"><img class="top-fv__image" src="./img/fv.jpg" alt="NMIXX"></div>
+                            <div class="swiper-slide"><img class="top-fv__image" src="./img/special-dummy-image.jpg" alt="NMIXX"></div>
+                            <div class="swiper-slide"><img class="top-fv__image" src="./img/fv.jpg" alt="NMIXX"></div>
+                        </div>
+                    </div>
+                    <ul class="top-fv__dots" aria-label="スライド"></ul>
+                </div>
+                <div class="top-fv__content">
+                    <img class="top-fv__logo" src="./img/fv-logo.svg" alt="NMIXX">
+                    <p class="top-fv__site-name">JAPAN OFFICIAL SITE</p>
+                    <a class="top-fv__button" href="./movie.html">WATCH MV<span class="top-fv__button-icon"></span></a>
+                    <p class="top-fv__scroll">SCROLL</p>
+                </div>
+                <picture class="top-fv__bubbles">
+                    <source media="(min-width: 768px)" srcset="./img/fv-bottom.png">
+                    <img src="./img/fv-bottom_sp.png" alt="">
+                </picture>
+            </div>
+        </section>
 
-    <section class="top-section top-discography">
-      <div class="top-section__inner">
-        <div class="top-section__head">
-          <h2 class="top-section__title">DISCOGRAPHY</h2>
-        </div>
-        <div class="top-discography__content">
-          <img class="top-discography__image" src="./img/discography-dummy-image.jpg" alt="">
-          <div class="top-discography__body">
-            <p class="top-discography__type">JAPAN 1ST SINGLE</p>
-            <h3 class="top-discography__title">XXXXXXX</h3>
-            <p class="top-discography__date">2026.XX.XX　RELEASE</p>
-            <a class="top-discography__button" href="#">STREAM NOW</a>
-          </div>
-        </div>
-        <div class="top-section__link-wrap">
-          <a class="top-section__link" href="#">VIEW ALL</a>
-        </div>
-      </div>
-    </section>
+        <section class="top-section top-discography">
+            <div class="top-section__inner">
+                <div class="top-section__head">
+                    <h2 class="top-section__title">DISCOGRAPHY</h2>
+                </div>
+                <div class="top-discography__content">
+                    <img class="top-discography__image" src="./img/discography-dummy-image.jpg" alt="">
+                    <div class="top-discography__body">
+                        <p class="top-discography__type">JAPAN 1ST SINGLE</p>
+                        <h3 class="top-discography__title">XXXXXXX</h3>
+                        <p class="top-discography__date">2026.XX.XX　RELEASE</p>
+                        <a class="top-discography__button" href="#">STREAM NOW</a>
+                    </div>
+                </div>
+                <div class="top-section__link-wrap">
+                    <a class="top-section__link" href="#">VIEW ALL<img class="top-section__link-icon" src="./img/view-more-arrow.svg" alt=""></a>
+                </div>
+            </div>
+        </section>
 
-    <section class="top-section top-movie">
-      <div class="top-section__inner">
-        <div class="top-section__head">
-          <h2 class="top-section__title">MOVIE</h2>
-        </div>
-        <div class="top-movie__content">
-          <a class="top-movie__main" href="./movie.html">
-            <img class="top-movie__main-image" src="./img/thumbnail.jpg" alt="">
-          </a>
-          <ul class="top-movie__list">
-            <li class="top-movie__item">
-              <a class="top-movie__link" href="#">
-                <img class="top-movie__thumb" src="./img/thumbnail.jpg" alt="">
-                <span class="top-movie__text"><span class="top-movie__label">MV</span><span class="top-movie__song">expergo</span></span>
-              </a>
-            </li>
-            <li class="top-movie__item">
-              <a class="top-movie__link" href="#">
-                <img class="top-movie__thumb" src="./img/thumbnail.jpg" alt="">
-                <span class="top-movie__text"><span class="top-movie__label">Performance Video</span><span class="top-movie__song">expergo</span></span>
-              </a>
-            </li>
-            <li class="top-movie__item">
-              <a class="top-movie__link" href="#">
-                <img class="top-movie__thumb" src="./img/thumbnail.jpg" alt="">
-                <span class="top-movie__text"><span class="top-movie__label">Dance Practice</span><span class="top-movie__song">expergo</span></span>
-              </a>
-            </li>
-            <li class="top-movie__item">
-              <a class="top-movie__link" href="#">
-                <img class="top-movie__thumb" src="./img/thumbnail.jpg" alt="">
-                <span class="top-movie__text"><span class="top-movie__label">Behind Film</span><span class="top-movie__song">expergo</span></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="top-movie__sp-controls">
-          <span class="top-movie__sp-arrow top-movie__sp-arrow--prev"></span>
-          <span class="top-movie__sp-arrow top-movie__sp-arrow--next"></span>
-          <span class="top-movie__sp-dot is-current"></span>
-          <span class="top-movie__sp-dot"></span>
-        </div>
-        <div class="top-section__link-wrap">
-          <a class="top-section__link" href="./movie.html">VIEW ALL</a>
-        </div>
-      </div>
-    </section>
+        <section class="top-section top-movie">
+            <div class="top-section__inner">
+                <div class="top-section__head">
+                    <h2 class="top-section__title">MOVIE</h2>
+                </div>
+                <div class="top-movie__content">
+                    <a class="top-movie__main" href="./movie.html">
+                        <img class="top-movie__main-image" src="./img/thumbnail.jpg" alt="">
+                    </a>
+                    <div class="top-movie__list-bottom">
+                        <div class="top-movie__list swiper">
+                            <ul class="top-movie__list-track swiper-wrapper">
+                                <li class="top-movie__item swiper-slide">
+                                    <a class="top-movie__link" href="#">
+                                        <img class="top-movie__thumb" src="./img/thumbnail.jpg" alt="">
+                                        <span class="top-movie__text"><span class="top-movie__label">MV</span><span
+                                                class="top-movie__song">expergo</span></span>
+                                    </a>
+                                </li>
+                                <li class="top-movie__item swiper-slide">
+                                    <a class="top-movie__link" href="#">
+                                        <img class="top-movie__thumb" src="./img/thumbnail.jpg" alt="">
+                                        <span class="top-movie__text"><span class="top-movie__label">Performance
+                                                Video</span><span class="top-movie__song">expergo</span></span>
+                                    </a>
+                                </li>
+                                <li class="top-movie__item swiper-slide">
+                                    <a class="top-movie__link" href="#">
+                                        <img class="top-movie__thumb" src="./img/thumbnail.jpg" alt="">
+                                        <span class="top-movie__text"><span class="top-movie__label">Dance Practice</span><span
+                                                class="top-movie__song">expergo</span></span>
+                                    </a>
+                                </li>
+                                <li class="top-movie__item swiper-slide">
+                                    <a class="top-movie__link" href="#">
+                                        <img class="top-movie__thumb" src="./img/thumbnail.jpg" alt="">
+                                        <span class="top-movie__text"><span class="top-movie__label">Behind Film</span><span
+                                                class="top-movie__song">expergo</span></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <span class="top-movie__sp-arrow top-movie__sp-arrow--prev" aria-label="前の動画へ"></span>
+                        <span class="top-movie__sp-arrow top-movie__sp-arrow--next" aria-label="次の動画へ"></span>
+                    </div>
+                </div>
+                <div class="top-movie__sp-dots" aria-label="スライド"></div>
+                <div class="top-section__link-wrap">
+                    <a class="top-section__link" href="./movie.html">VIEW ALL<img class="top-section__link-icon" src="./img/view-more-arrow.svg" alt=""></a>
+                </div>
+            </div>
+        </section>
 
-    <section class="top-section top-members">
-      <div class="top-section__inner">
-        <div class="top-section__head">
-          <h2 class="top-section__title">MEMBERS</h2>
-        </div>
-        <ul class="top-members__list">
-          <li class="top-members__item"><img class="top-members__image" src="./img/lily.jpg" alt="LILY"><span class="top-members__name">LILY</span></li>
-          <li class="top-members__item"><img class="top-members__image" src="./img/haewon.jpg" alt="HAEWON"><span class="top-members__name">HAEWON</span></li>
-          <li class="top-members__item"><img class="top-members__image" src="./img/sullyoon.jpg" alt="SULLYOON"><span class="top-members__name">SULLYOON</span></li>
-          <li class="top-members__item"><img class="top-members__image" src="./img/bae.jpg" alt="BAE"><span class="top-members__name">BAE</span></li>
-          <li class="top-members__item"><img class="top-members__image" src="./img/jiwoo.jpg" alt="JIWOO"><span class="top-members__name">JIWOO</span></li>
-          <li class="top-members__item"><img class="top-members__image" src="./img/kyujin.jpg" alt="KYUJIN"><span class="top-members__name">KYUJIN</span></li>
-        </ul>
-        <div class="top-section__link-wrap">
-          <a class="top-section__link" href="./members.html">VIEW ALL</a>
-        </div>
-      </div>
-    </section>
+        <section class="top-section top-members">
+            <div class="top-section__inner">
+                <div class="top-section__head">
+                    <h2 class="top-section__title">MEMBERS</h2>
+                </div>
+                <ul class="top-members__list">
+                    <li class="top-members__item"><img class="top-members__image" src="./img/lily.jpg" alt="LILY"><span
+                            class="top-members__name">LILY</span></li>
+                    <li class="top-members__item"><img class="top-members__image" src="./img/haewon.jpg"
+                            alt="HAEWON"><span class="top-members__name">HAEWON</span></li>
+                    <li class="top-members__item"><img class="top-members__image" src="./img/sullyoon.jpg"
+                            alt="SULLYOON"><span class="top-members__name">SULLYOON</span></li>
+                    <li class="top-members__item"><img class="top-members__image" src="./img/bae.jpg" alt="BAE"><span
+                            class="top-members__name">BAE</span></li>
+                    <li class="top-members__item"><img class="top-members__image" src="./img/jiwoo.jpg"
+                            alt="JIWOO"><span class="top-members__name">JIWOO</span></li>
+                    <li class="top-members__item"><img class="top-members__image" src="./img/kyujin.jpg"
+                            alt="KYUJIN"><span class="top-members__name">KYUJIN</span></li>
+                </ul>
+                <div class="top-section__link-wrap">
+                    <a class="top-section__link" href="./members.html">VIEW ALL<img class="top-section__link-icon" src="./img/view-more-arrow.svg" alt=""></a>
+                </div>
+            </div>
+        </section>
 
-    <section class="top-section top-news">
-      <div class="top-section__inner">
-        <div class="top-section__head">
-          <h2 class="top-section__title">NEWS</h2>
-        </div>
-        <ul class="top-news__list">
-          <li class="top-news__item">
-            <a class="top-news__link" href="./news-detail.html">
-              <img class="top-news__image" src="./img/news-dummy-image.jpg" alt="">
-              <span class="top-news__body">
-                <span class="top-news__meta"><time class="top-news__date" datetime="2024-05-08">2024.05.08</time><span class="top-news__label">RELEASE</span><span class="top-news__new">NEW</span></span>
-                <span class="top-news__title">JAPAN 1ST SINGLE「expergo」リリース決定！</span>
-              </span>
-            </a>
-          </li>
-          <li class="top-news__item">
-            <a class="top-news__link" href="#">
-              <img class="top-news__image" src="./img/news-dummy-image.jpg" alt="">
-              <span class="top-news__body">
-                <span class="top-news__meta"><time class="top-news__date" datetime="2024-04-25">2024.04.25</time><span class="top-news__label">LIVE</span></span>
-                <span class="top-news__title">NMIXX 2ND FAN CONCERT “NMIXX CHANGE UP : MIXX LAB” in JAPAN 開催決定！</span>
-              </span>
-            </a>
-          </li>
-          <li class="top-news__item">
-            <a class="top-news__link" href="#">
-              <img class="top-news__image" src="./img/news-dummy-image.jpg" alt="">
-              <span class="top-news__body">
-                <span class="top-news__meta"><time class="top-news__date" datetime="2024-04-10">2024.04.10</time><span class="top-news__label">INFO</span></span>
-                <span class="top-news__title">NMIXX OFFICIAL FANCLUB「NSWER JAPAN」オープン！</span>
-              </span>
-            </a>
-          </li>
-        </ul>
-        <div class="top-section__link-wrap">
-          <a class="top-section__link" href="./news.html">VIEW ALL</a>
-        </div>
-      </div>
-    </section>
+        <section class="top-section top-news">
+            <div class="top-section__inner">
+                <div class="top-section__head">
+                    <h2 class="top-section__title">NEWS</h2>
+                </div>
+                <ul class="top-news__list">
+                    <li class="top-news__item">
+                        <a class="top-news__link" href="./news-detail.html">
+                            <img class="top-news__image" src="./img/news-dummy-image.jpg" alt="">
+                            <span class="top-news__body">
+                                <span class="top-news__meta"><time class="top-news__date"
+                                        datetime="2024-05-08">2024.05.08</time><span
+                                        class="top-news__label">RELEASE</span><span
+                                        class="top-news__new">NEW</span></span>
+                                <span class="top-news__title">JAPAN 1ST SINGLE「expergo」リリース決定！</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="top-news__item">
+                        <a class="top-news__link" href="#">
+                            <img class="top-news__image" src="./img/news-dummy-image.jpg" alt="">
+                            <span class="top-news__body">
+                                <span class="top-news__meta"><time class="top-news__date"
+                                        datetime="2024-04-25">2024.04.25</time><span
+                                        class="top-news__label">LIVE</span></span>
+                                <span class="top-news__title">NMIXX 2ND FAN CONCERT “NMIXX CHANGE UP : MIXX LAB” in
+                                    JAPAN 開催決定！</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="top-news__item">
+                        <a class="top-news__link" href="#">
+                            <img class="top-news__image" src="./img/news-dummy-image.jpg" alt="">
+                            <span class="top-news__body">
+                                <span class="top-news__meta"><time class="top-news__date"
+                                        datetime="2024-04-10">2024.04.10</time><span
+                                        class="top-news__label">INFO</span></span>
+                                <span class="top-news__title">NMIXX OFFICIAL FANCLUB「NSWER JAPAN」オープン！</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="top-section__link-wrap">
+                    <a class="top-section__link" href="./news.html">VIEW ALL<img class="top-section__link-icon" src="./img/view-more-arrow.svg" alt=""></a>
+                </div>
+            </div>
+        </section>
 
-    <section class="top-section top-schedule">
-      <div class="top-section__inner">
-        <div class="top-section__head">
-          <h2 class="top-section__title">SCHEDULE</h2>
-        </div>
-        <ul class="top-schedule__list">
-          <li class="top-schedule__item"><time class="top-schedule__date" datetime="2024-07-20">2024.07.20</time><span class="top-schedule__day">SAT</span><span class="top-schedule__title">NMIXX 2ND FAN CONCERT in TOKYO</span><span class="top-schedule__place">東京ガーデンシアター</span></li>
-          <li class="top-schedule__item"><time class="top-schedule__date" datetime="2024-07-21">2024.07.21</time><span class="top-schedule__day">SUN</span><span class="top-schedule__title">NMIXX 2ND FAN CONCERT in TOKYO</span><span class="top-schedule__place">東京ガーデンシアター</span></li>
-          <li class="top-schedule__item"><time class="top-schedule__date" datetime="2024-07-27">2024.07.27</time><span class="top-schedule__day">SAT</span><span class="top-schedule__title">NMIXX 2ND FAN CONCERT in OSAKA</span><span class="top-schedule__place">グランキューブ大阪</span></li>
-          <li class="top-schedule__item"><time class="top-schedule__date" datetime="2024-07-28">2024.07.28</time><span class="top-schedule__day">SUN</span><span class="top-schedule__title">NMIXX 2ND FAN CONCERT in OSAKA</span><span class="top-schedule__place">グランキューブ大阪</span></li>
-        </ul>
-        <div class="top-section__link-wrap">
-          <a class="top-section__link" href="#">VIEW ALL</a>
-        </div>
-      </div>
-    </section>
-  </main>
+        <section class="top-section top-schedule">
+            <div class="top-section__inner">
+                <div class="top-section__head">
+                    <h2 class="top-section__title">SCHEDULE</h2>
+                </div>
+                <div class="top-schedule__contents">
+                    <ul class="top-schedule__list">
+                        <li class="top-schedule__item"><time class="top-schedule__date"
+                                datetime="2024-07-20">2024.07.20</time><span class="top-schedule__day">SAT</span><span
+                                class="top-schedule__title">NMIXX 2ND FAN CONCERT in TOKYO</span><span
+                                class="top-schedule__place">東京ガーデンシアター</span></li>
+                        <li class="top-schedule__item"><time class="top-schedule__date"
+                                datetime="2024-07-21">2024.07.21</time><span class="top-schedule__day">SUN</span><span
+                                class="top-schedule__title">NMIXX 2ND FAN CONCERT in TOKYO</span><span
+                                class="top-schedule__place">東京ガーデンシアター</span></li>
+                        <li class="top-schedule__item"><time class="top-schedule__date"
+                                datetime="2024-07-27">2024.07.27</time><span class="top-schedule__day">SAT</span><span
+                                class="top-schedule__title">NMIXX 2ND FAN CONCERT in OSAKA</span><span
+                                class="top-schedule__place">グランキューブ大阪</span></li>
+                        <li class="top-schedule__item"><time class="top-schedule__date"
+                                datetime="2024-07-28">2024.07.28</time><span class="top-schedule__day">SUN</span><span
+                                class="top-schedule__title">NMIXX 2ND FAN CONCERT in OSAKA</span><span
+                                class="top-schedule__place">グランキューブ大阪</span></li>
+                    </ul>
+                    <div class="top-section__link-wrap">
+                        <a class="top-section__link" href="#">VIEW ALL<img class="top-section__link-icon" src="./img/view-more-arrow.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <div id="footer-placeholder"></div>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="./js/script.js"></script>
-  <script src="./js/gsap.js"></script>
-  <script src="./js/include-parts.js"></script>
+    <div id="footer-placeholder"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/gsap.js"></script>
+    <script src="./js/include-parts.js"></script>
 </body>
 
 </html>

@@ -83,6 +83,67 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $(".js-hamburger").removeClass("is-open");
     }
 
+    // top-fv スライダー
+    if ($(".top-fv__slider").length) {
+        new Swiper(".top-fv__slider", {
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true
+            },
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".top-fv__dots",
+                clickable: true,
+                bulletClass: "top-fv__dot",
+                bulletActiveClass: "is-current"
+            }
+        });
+    }
+
+    // top-movie スライダー(SPのみ。2枚1組でページ送り。画面幅がPC/SPの境界(768px)をまたいだ時に作り直す)
+    if ($(".top-movie__list.swiper").length) {
+        var movieSwiper = null;
+
+        function createMovieSwiper() {
+            return new Swiper(".top-movie__list", {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 20,
+                navigation: {
+                    prevEl: ".top-movie__sp-arrow--prev",
+                    nextEl: ".top-movie__sp-arrow--next"
+                },
+                pagination: {
+                    el: ".top-movie__sp-dots",
+                    clickable: true,
+                    bulletClass: "top-movie__sp-dot",
+                    bulletActiveClass: "is-current"
+                }
+            });
+        }
+
+        // PC(768px以上)ではSwiperを破棄してSP用に追加されたインラインスタイルを除去し、
+        // SPに戻ったら作り直す
+        var moviePcQuery = window.matchMedia("(min-width: 768px)");
+        function syncMovieSwiper(query) {
+            if (query.matches) {
+                if (movieSwiper) {
+                    movieSwiper.destroy(true, true);
+                    movieSwiper = null;
+                }
+            } else if (!movieSwiper) {
+                movieSwiper = createMovieSwiper();
+            }
+        }
+        syncMovieSwiper(moviePcQuery);
+        moviePcQuery.addEventListener("change", syncMovieSwiper);
+    }
+
     // modal
     $(".js-modal-open").each(function () {
         $(this).on("click", function (e) {

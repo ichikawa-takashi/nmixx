@@ -60,7 +60,7 @@ padding: rem(100) rem(0);
 }
 
 .list-page__item-link:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .list-page__item-link::after {
@@ -227,6 +227,11 @@ padding: rem(100) rem(0);
 .news-detail__text-link {
   color: $black;
   overflow-wrap: anywhere;
+  transition: opacity 0.3s ease;
+}
+
+.news-detail__text-link:hover {
+  opacity: 0.6;
 }
 
 .news-detail__section--notes {

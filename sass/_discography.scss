@@ -27,6 +27,11 @@
 .discography__link {
     display: block;
     color: $black;
+    transition: opacity 0.3s ease;
+}
+
+.discography__link:hover {
+    opacity: 0.6;
 }
 
 .discography__image {
@@ -151,6 +156,11 @@
     padding: rem(26.5) rem(20);
     @include font(24, 35, 0, 400);
     order: 3;
+    transition: opacity 0.3s ease;
+}
+
+.discography-detail__stream:hover {
+    opacity: 0.6;
 }
 
 .discography-detail__track {
@@ -203,6 +213,11 @@
 .discography-detail__more-link {
     display: block;
     color: $black;
+    transition: opacity 0.3s ease;
+}
+
+.discography-detail__more-link:hover {
+    opacity: 0.6;
 }
 
 .discography-detail__more-image {

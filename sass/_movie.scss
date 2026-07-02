@@ -16,6 +16,16 @@
   text-align: center;
 }
 
+.movie__link {
+  display: block;
+  color: $black;
+  transition: opacity 0.3s ease;
+}
+
+.movie__link:hover {
+  opacity: 0.6;
+}
+
 .movie__list {
   margin-top: rem(100);
 }
