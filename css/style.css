@@ -2306,8 +2306,8 @@ select::-ms-expand {
 
 @media screen and (min-width: 768px) {
   .discography {
-    padding-top: 134px;
-    padding-bottom: 161px;
+    padding-top: 100px;
+    padding-bottom: 150px;
   }
   .discography__inner {
     max-width: 1053px;
