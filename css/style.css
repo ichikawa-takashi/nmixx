@@ -781,13 +781,25 @@ select::-ms-expand {
 }
 
 .top-fv__bubbles {
-  position: absolute;
+  position: fixed;
   right: 5.333vw;
-  bottom: -6.667vw;
+  bottom: 5.333vw;
   z-index: 100;
   width: 92vw;
   max-width: 21.5625rem;
   aspect-ratio: 690/812;
+  opacity: 1;
+  pointer-events: none;
+  transform: translateY(0);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.top-fv__bubbles.is-hidden {
+  opacity: 0;
+  transform: translateY(1.25rem);
+}
+
+.top-fv__bubbles.is-hidden .top-fv__bubble-main {
   pointer-events: none;
 }
 
@@ -1538,7 +1550,7 @@ select::-ms-expand {
   }
   .top-fv__bubbles {
     right: 1.458vw;
-    bottom: -1.771vw;
+    bottom: 1.458vw;
     width: 345px;
     max-width: 345px;
   }

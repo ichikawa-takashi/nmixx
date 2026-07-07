@@ -115,6 +115,42 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             .attr("aria-label", isOpen ? "NSWERリンクを閉じる" : "NSWERリンクを開く");
     });
 
+    // top-fv ANSWER bubbles: フッターに重なったらフェードダウンで非表示、離れたらフェードアップで再表示
+    if ($(".js-fv-bubbles").length) {
+        var fvBubbles = document.querySelector(".js-fv-bubbles");
+
+        function watchFooterForBubbles() {
+            var footer = document.querySelector(".footer");
+            if (!footer) return;
+
+            var footerObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        fvBubbles.classList.add("is-hidden");
+                        $(fvBubbles).removeClass("is-open");
+                        $(".js-fv-bubbles-button")
+                            .attr("aria-expanded", "false")
+                            .attr("aria-label", "NSWERリンクを開く");
+                    } else {
+                        fvBubbles.classList.remove("is-hidden");
+                    }
+                });
+            });
+
+            footerObserver.observe(footer);
+        }
+
+        if (document.querySelector(".footer")) {
+            watchFooterForBubbles();
+        } else {
+            document.addEventListener("parts:loaded", function (e) {
+                if (e.detail && e.detail.url === "./parts/footer.html") {
+                    watchFooterForBubbles();
+                }
+            });
+        }
+    }
+
     // top-movie スライダー(SPのみ。2枚1組でページ送り。画面幅がPC/SPの境界(768px)をまたいだ時に作り直す)
     if ($(".top-movie__list.swiper").length) {
         var movieSwiper = null;
